@@ -5,6 +5,14 @@
     <title>My spending record</title>
     <link href="minimal-table.css" rel="stylesheet" type="text/css">
     <style>
+    tbody {
+      font-size: 90%;
+      font-style: italic;
+    }
+
+    tfoot {
+      font-weight: bold;
+    }
     </style>
   </head>
   <body>
@@ -12,19 +20,44 @@
 
       <table>
         <caption>How I chose to spend my money</caption>
+        <!-- Using id and header attributes instead of scope attribute-->
+        <!--
+        <thead>
+        <tr>
+          <th id="purchase">Purchase</th>
+          <th id="location">Location</th>
+          <th id="date">Date</th>
+          <th id="evaluation">Evaluation</th>
+          <th id="cost">Cost (€)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th id="haircut">Haircut</th>
+          <td headers="location haircut">Hairdresser</td>
+          <td headers="date haircut">12/09</td>
+          <td headers="evaluation haircut">Great idea</td>
+          <td headers="cost haircut">30</td>
+        </tr>
+        -->
+        <thead>
           <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
+            <th scope="col">Purchase</th>
+            <th scope="col">Location</th>
+            <th scope="col">Date</th>
+            <th scope="col">Evaluation</th>
+            <th scope="col">Cost (€)</th>
           </tr>
+        </thead>
+        <tfoot>
           <tr>
-            <td>SUM</td>
+            <td colspan="4">SUM</td>
             <td>118</td>
           </tr>
+        </tfoot>
+        <tbody>
           <tr>
-            <td>Haircut</td>
+            <td scope="row">Haircut</td>
             <td>Hairdresser</td>
             <td>12/09</td>
             <td>Great idea</td>
@@ -51,6 +84,8 @@
             <td>Good</td>
             <td>5</td>
           </tr>
+        </tbody>
+
     </table>
 
   </body>
