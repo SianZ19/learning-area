@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Payment page</title>
+    <link rel="stylesheet" href="payment-form.css">
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <h1>Payment Form</h1>
+      <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+      <section>
+        <h2>Contact information</h2>
+        <fieldset>
+          <legend>Title</legend>
+          <ul>
+            <li>
+              <label for="title_1">
+                <!-- add value attribute  -->
+                <input type="radio" name="user_title" id="title_1" value="M.">
+                Mister
+              </label>
+            </li>
+            <li>
+              <label for="title_2">
+                <input type="radio" name="user_title" id="title_2" value="Ms.">
+                Miss
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <p>
+          <!-- Don't forget to use <span> and <abbr>.
+          My code: <label for="name">Name: * </label>
+          -->
+          <label for="name">
+            <span>Name: </span>
+            <strong><abbr title="required">*</abbr></strong>
+            <input type="text" name="user_name" id="name">
+          </label>
+        </p>
+        <p>
+          <!-- Don't forget to use <span> and <abbr>.
+          My code: <label for="email">E-mail: * </label>
+          -->
+          <label for="mail">
+            <span>E-mail: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" name="user_mail" id="mail">
+        </p>
+        <p>
+          <!-- Don't forget to use <span> and <abbr>.
+          My code: <label for="password">Password: * </label>
+          -->
+          <label for="pwd">
+            <span>Password: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <!-- type has a value for password
+          my code: <input type="text" name="user_password" id="password">
+          -->
+          <input type="password" name="user_password" id="pwd">
+        </p>
+      </section>
+      <section>
+        <h2>Payment information</h2>
+        <p>
+          <!-- Use <span> inside <label> -->
+          <label for="card_type">
+            <span>Card type: </span>
+          </label>
+          <!-- pay attention to how to use select -->
+          <select id="card_type" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <!-- My code:
+          <label for="card_number">Card number: * </label> -->
+          <label for="number">
+            <span>Card number:</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <!-- type value is text not number -->
+          <input type="text" name="user_card_number" id="number">
+        </p>
+        <p>
+          <!--
+            My code:
+            <label for="card_expiradate">Expiration date: * </label>
+          -->
+          <label for="date">
+            <span>Expiration date:</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>formatted as mm/yy</em>
+          </label>
+          <input type="date" name="user_card_expiration_date" id="date">
+        </p>
+      </section>
+      <p>
+        <button type="submit">Validate the payment</button>
+      </p>
+    </form>
+  </body>
+</html>
